@@ -1,13 +1,12 @@
-name: Exercice 2
+name: Exercice 3
 
 on:
-  pull_request:
-    paths:
-      - '**.yml'
-      - '!**/test/**'
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 jobs:
-  job_ex2:
+  job_ex3:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Je teste l'exercice 2"
+      - run: echo "Je teste l'exercice 3"
